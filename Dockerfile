@@ -5,7 +5,7 @@ FROM python:${PYTHON_VERSION} AS builder
 
 WORKDIR /app
 
-COPY src/requirements.txt ./
+COPY requirements.txt ./
 
 RUN pip install --upgrade pip && \
 pip install --target=/install -r requirements.txt
@@ -22,8 +22,8 @@ ENV PYTHONUNBUFFERED=1
 
 COPY . .
 
-RUN python src/manage.py migrate
+RUN python manage.py migrate
 
 EXPOSE 8080
 
-CMD ["python", "src/manage.py", "runserver", "0.0.0.0:8080"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]

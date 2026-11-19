@@ -77,8 +77,8 @@ curl http://127.0.0.1:8080
 If the corresponding endpoints are registered in Django, test them using:
 
 ```bash
-curl http://127.0.0.1:8080/live
-curl http://127.0.0.1:8080/ready
+curl http://127.0.0.1:8080/api/live
+curl http://127.0.0.1:8080/api/ready
 ```
 
 Expected response: HTTP `200 OK`.
