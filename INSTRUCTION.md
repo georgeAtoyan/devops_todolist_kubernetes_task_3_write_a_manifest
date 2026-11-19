@@ -118,13 +118,13 @@ kubectl exec busybox -n todoapp -- curl http://<TODOAPP_POD_IP>:8080
 Test the readiness endpoint:
 
 ```bash
-kubectl exec busybox -n todoapp -- curl -i http://<TODOAPP_POD_IP>:8080/ready
+kubectl exec busybox -n todoapp -- curl -i http://<TODOAPP_POD_IP>:8080/api/ready
 ```
 
 Test the liveness endpoint:
 
 ```bash
-kubectl exec busybox -n todoapp -- curl -i http://<TODOAPP_POD_IP>:8080/live
+kubectl exec busybox -n todoapp -- curl -i http://<TODOAPP_POD_IP>:8080/api/live
 ```
 
 The `-i` option displays the HTTP response headers, including the status code.
